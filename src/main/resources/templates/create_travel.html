@@ -1,0 +1,20 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+ 
+    <title>Share Travel Costs</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Hello Fellow Travel Cost Sharers</h1>
+<h2>Create a new Travel Adventure</h2>
+<form action="/travels/create" method="post">
+  Destination:
+  <input name="destination" type="text"><br/>
+  Departure date:
+  <input name="start" type="text"><br/>
+  Return date:
+  <input name="end" type="text"><br/>
+  <input type="submit">
+</form>
+</body>
+</html>

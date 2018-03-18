@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+ 
+    <title>Share Travel Costs</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Hello Fellow Travel Cost Sharers</h1>
+<h2 th:text="|Edit Travel to ${travel.destination}|">Edit Travel to Your Destination</h2>
+<form th:action="|/travels/${travel.id}/edit|" method="post">
+  Destination
+  <input name="destination" type="text" th:value="${travel.destination}"><br/>
+  <input name="start" type="text" th:value="${travel.start}"><br/>
+  <input name="end" type="text" th:value="${travel.end}"><br/>
+  <input type="submit">
+</form>
+</body>
+</html>

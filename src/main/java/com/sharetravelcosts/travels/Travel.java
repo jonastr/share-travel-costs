@@ -1,8 +1,9 @@
 package com.sharetravelcosts.travels;
 
 
-import java.text.SimpleDateFormat;
+import java.util.Date;
 import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
 
 
 public class Travel {
@@ -11,12 +12,14 @@ public class Travel {
 
     public String userId;
     public String destination;
-    public SimpleDateFormat start;
-    public SimpleDateFormat end;
+    @Transient
+    public Date start;
+    @Transient
+    public Date end;
 
     public Travel() {}
 
-    public Travel(String destination, SimpleDateFormat start, SimpleDateFormat end) {
+    public Travel(String destination, Date start, Date end) {
     			this.destination = destination;
     			this.start = start;
     			this.end = end;
