@@ -1,9 +1,8 @@
-package com.sharetravelcosts.manage;
+package com.sharetravelcosts.controllers;
 
-import java.util.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.List;
+import java.util.Date;
 import java.util.Map;
 import java.util.Optional;
 
@@ -18,17 +17,10 @@ import com.sharetravelcosts.entities.Travel;
 import com.sharetravelcosts.storage.TravelRepository;
  
 @Controller
-public class ManageController {
+public class CRUDController {
 	@Autowired
 	private TravelRepository repository;
 	
-    @GetMapping(path="/travels")
-    String listTravels(Map<String, Object> model) {
-    		List<Travel> travels = repository.findAll();
-    		model.put("travels", travels);
-        return "manage";
-    }
-    
     @GetMapping(path="/travels/create")
     String createTravel(Map<String, Object> mode) {
     		return "create_travel";
@@ -51,7 +43,6 @@ public class ManageController {
     		catch(ParseException e) {
     			return "redirect:/travels";
     		}
-    		
     		return "redirect:/travels";
     }
     

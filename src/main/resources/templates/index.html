@@ -6,6 +6,24 @@
 </head>
 <body>
 <h1>Hello Fellow Travel Cost Sharers</h1>
-<a href="/manage">Manage Travels</a>
+<h2>Manage Your Travels</h2>
+<table>
+<thead>
+	<tr>
+		<td>ID</td>
+		<td>Destination</td>
+		<td>Start</td>
+		<td>End</td>
+	</tr>
+</thead>
+<tbody>
+    <tr th:each="travel: ${travels}">
+        <td th:text="${travel.id}"/>
+        <td><a th:href="|/travels/${travel.id}|" th:text="${travel.destination}"></a></td>
+        <td th:text="${travel.start}" />
+        <td th:text="${travel.end}" />
+    </tr>
+</tbody>
+</table>
 </body>
 </html>
