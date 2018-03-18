@@ -1,4 +1,4 @@
-package com.sharetravelcosts.travels;
+package com.sharetravelcosts.entities;
 
 
 import java.util.Date;

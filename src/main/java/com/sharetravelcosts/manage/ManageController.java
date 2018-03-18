@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.sharetravelcosts.travels.Travel;
-import com.sharetravelcosts.travels.TravelRepository;
+import com.sharetravelcosts.entities.Travel;
+import com.sharetravelcosts.storage.TravelRepository;
  
 @Controller
 public class ManageController {

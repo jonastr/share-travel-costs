@@ -1,9 +1,11 @@
-package com.sharetravelcosts.travels;
+package com.sharetravelcosts.storage;
 
 import java.util.List;
 import java.text.SimpleDateFormat;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.sharetravelcosts.entities.Travel;
 
 public interface TravelRepository extends MongoRepository<Travel, String> {
     public List<Travel> findByDestination(String destination);
