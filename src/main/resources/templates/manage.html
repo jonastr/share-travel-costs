@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+ 
+    <title>Share Travel Costs</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<h1>Hello Fellow Travel Cost Sharers</h1>
+<h2>Manage Your Travels</h2>
+<table>
+<thead>
+	<tr>
+		<td>ID</td>
+		<td>Name</td>
+		<td>Start</td>
+	</tr>
+</thead>
+<tbody>
+    <tr th:each="travel: ${travels}">
+        <td th:text="${travel.id}" />
+        <td th:text="${travel.name}" />
+        <td th:text="${travel.start.toString()}" />
+    </tr>
+</tbody>
+</table>
+</body>
+</html>
